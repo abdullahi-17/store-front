@@ -24,6 +24,9 @@ jobs:
           node-version: '22.x'
 
       - name: npm install, build, and test
+        env:
+          VUE_APP_PRODUCT_SERVICE_URL: https://product-service-h8gsc5gyeaa9aqaq.swedencentral-01.azurewebsites.net
+          VUE_APP_ORDER_SERVICE_URL: https://order-service-aga4g6a0g5bjaxew.swedencentral-01.azurewebsites.net
         run: |
           npm install
           npm run build --if-present
